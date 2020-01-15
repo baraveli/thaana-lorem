@@ -1,6 +1,6 @@
 # :palm_tree: Thaana lorem
 
-![thaana lorem logo](https://jinas.me/images/thaanaloremgit.jpg)
+![thaana lorem logo](https://jinas.me/images/baravelithaanasd.jpg)
 
 This is a Thaana lorem ipsum generator written in PHP. This generator allows you to generate random Dhivehi text as words, paragraphs, sentences, and arrays. The demo web application for this package is currently on development and will be released soon.
 
