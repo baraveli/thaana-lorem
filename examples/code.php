@@ -6,4 +6,4 @@ require_once '../vendor/autoload.php';
 
 $thaana = new ThaanaLorem;
 
-echo $thaana->paragraphs(2);
+echo $thaana->paragraphs(3);
