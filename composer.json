@@ -1,0 +1,22 @@
+{
+    "name": "baraveli/thaanalorem",
+    "description": "Thaana Lorem ipsum generator.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Jinas",
+            "email": "j@live.mv"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "ThaanaLorem\\" : "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.0"
+    }
+}
