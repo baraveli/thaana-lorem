@@ -1,6 +1,5 @@
 # :palm_tree: Thaana lorem
 
-![thaana lorem logo](https://jinas.me/images/baravelithaanaasdsd.jpg)
 
 This is a Thaana lorem ipsum generator written in PHP. This generator allows you to generate random Dhivehi text as words, paragraphs, sentences, and arrays. The demo web application for this package is currently on development and will be released soon.
 
@@ -129,61 +128,3 @@ Output:
 ސަސްޕިޑޯ, އިކުލައިސް މިކަމެއް ެކް ބުނެފަ ރާ ޑޮނެކް ފުރުސަތު, އުޓް އަމާން ފަންނު ފުރިންގިލަ ވިޔަފާރިވެރިންނަށް ނޭފަތް. ސަސްޕެންޑް ޑޮނެކް ހުރަސްކޮށް ހައްޔަރު ެކް ކުއްޖާގެ ގޯލް ފާރު އަންނަ ޕުލްވިނާރް
 ހޭލާ ތަށި އިން, މިކަމެއް ފުސްކެޔޮ ވިހާ ދިރިހުރުމުގެ ގުގު ކުއިސް ޕުލަޓެއަ ރައީސް ޖަޒީރާވަންތަ އެއު ފެލިސް, ލޮބޯރަޓިސް މެދުވެރިވީ  ރަށްތަކުގެ ވެލް ކުބިލިއަ ލިފްހަޓުބަ ސަސްޕިޑޯ މުސް ނެކުއި ކީ ކޯޓު.
 ```
-
-### Dictionary loader
-
-All the Dhivehi words get loaded using a dictionary loader. The dictionary loader loads the thaana.json file which holds all the Thaana data to get shuffled during the generation process. Thaana words are arranged in random order inside the file
-
-sample data from thaana.json file is shown below:
-
-```json
-[
-    "ދިވެހިންގެ",
-    "ފެނުނީ ",
-    "މެދުވެރިވީ ",
-    "ވިޔަފާރިވެރިންނަށް",
-    "މަހެއް",
-    "ފާހަގަ",
-    "ފުރުސަތު",
-    "ގަނެވޭނެ",
-    "އިން",
-    "އެކު",
-    "ރަށް",
-    "އެޑް",
-    "ވިދާ",
-    "ގުގު",
-    "ރާ",
-    "ރައީސް",
-    "ކުސް"
-]
-```
-Dictionary loader class is shown below.
-
-```php
-<?php
-
-namespace ThaanaLorem\Utils;
-
-class DictionaryLoader
-{
-    public static function load(string $filename) : array
-    {
-        if (file_exists(__DIR__ . '\Dictionary\\' . $filename .  '.json')) {
-            $path = __DIR__ . '\Dictionary\\' . $filename .  '.json';
-        } else {
-            $path = './../Dictionary/' . $filename . '.json';
-        }
-
-        $file = file_get_contents($path, FILE_USE_INCLUDE_PATH);
-        $words = json_decode($file, true);
-
-        if (!isset($file, $words)) {
-            throw new \Exception("Error reading the dictionary file or it it is empty");
-        }
-
-        return $words;
-    }
-}
-
-```
-This Util class contains a single static load method that loads the JSON file given the filename. In this case, it loads the dictionary file into the application.
