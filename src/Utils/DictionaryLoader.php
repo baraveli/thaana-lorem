@@ -9,7 +9,7 @@ class DictionaryLoader
         if (file_exists(__DIR__ . '\Dictionary\\' . $filename .  '.json')) {
             $path = __DIR__ . '\Dictionary\\' . $filename .  '.json';
         } else {
-            $path = './../Dictionary/' . $filename . '.json';
+            $path = getcwd() . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'baraveli' . DIRECTORY_SEPARATOR . 'thaanalorem' . DIRECTORY_SEPARATOR . 'Dictionary' . DIRECTORY_SEPARATOR . $filename . '.json';
         }
 
         $file = file_get_contents($path, FILE_USE_INCLUDE_PATH);
