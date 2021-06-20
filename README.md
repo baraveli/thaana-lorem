@@ -3,7 +3,7 @@
 
 This is a Thaana lorem ipsum generator written in PHP. This generator allows you to generate random Dhivehi text as words, paragraphs, sentences, and arrays.
 
-If you need a web app to generate thaana lorem checkout [Dhivehi Faker](https://faker.baivaru.net/) by [Baivaru](https://github.com/baivaru).
+If you need a web app to generate thaana lorem ipsum checkout [Dhivehi Faker](https://faker.baivaru.net/) by [Baivaru](https://github.com/baivaru).
 
 ## :battery: Installation
 
